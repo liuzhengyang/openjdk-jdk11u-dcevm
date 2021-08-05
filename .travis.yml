@@ -2,10 +2,10 @@
 # This file is deprecated now since TravaOpenJDK is moving to GitHub Actions 
 #
 language: cpp
-matrix:
+jobs:
   include:
-  - os: osx
-    env: OS_BUILD=osx
+#  - os: osx
+#    env: OS_BUILD=osx
   - os: linux
     env: OS_BUILD=linux FOLDER=x64
     dist: xenial
@@ -22,11 +22,11 @@ matrix:
     before_install:
     - sudo apt-get install -y libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev
       libcups2-dev libxrandr-dev libasound2 libasound2-dev zip
-  - os: windows
-    env: OS_BUILD=windows
-    before_install:
-    - choco install cygwin
-    - C:\\tools\\cygwin\\cygwinsetup.exe -q -P make,unzip,automake,autoconf,zip
+#  - os: windows
+#    env: OS_BUILD=windows
+#    before_install:
+#    - choco install cygwin
+#    - C:\\tools\\cygwin\\cygwinsetup.exe -q -P make,unzip,automake,autoconf,zip
 before_script:
   - if [[ $OS_BUILD == "windows" ]]; then
       git config --system core.longpaths true;
