@@ -4310,13 +4310,13 @@ void Arguments::setup_hotswap_agent() {
   if (DumpSharedSpaces)
     return;
 
-  if (HotswapAgent == NULL || strcmp(HotswapAgent, "disabled") == 0)
-    return;
+//  if (HotswapAgent == NULL || strcmp(HotswapAgent, "disabled") == 0)
+//    return;
 
   // Force AllowEnhancedClassRedefinition if HA is enabled
   AllowEnhancedClassRedefinition = true;
 
-  bool ha_fatjar = strcmp(HotswapAgent, "fatjar") == 0;
+  bool ha_fatjar = true;
   bool ha_core = strcmp(HotswapAgent, "core") == 0;
 
   // Set HotswapAgent
