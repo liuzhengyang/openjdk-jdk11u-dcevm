@@ -2698,7 +2698,7 @@ define_pd_global(uint64_t,MaxRAM,                    1ULL*G);
           "Must be activated by UseHotswapDeoptExclusion."                  \
           "default value=<java,jdk without dynamic java/jdk classes>")      \
                                                                             \
-  product(ccstr, HotswapAgent, "disabled",                                  \
+  product(ccstr, HotswapAgent, "fatjar",                                  \
           "Specify HotswapAgent image to be used."                          \
           "disabled: hotswap agent is disabled (default)"                   \
           "fatjar: full HA. Use integrated hotswap-agent.jar"               \
