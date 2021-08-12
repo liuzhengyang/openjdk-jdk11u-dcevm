@@ -45,7 +45,7 @@ $(eval $(call SetupBuildLauncher, jmap, \
 
 $(eval $(call SetupBuildLauncher, jps, \
     MAIN_CLASS := sun.tools.jps.Jps, \
-    JAVA_ARGS := -XX:HotswapAgent=disable ,\
+    JAVA_ARGS := -XX:HotswapAgent=disable, \
 ))
 
 $(eval $(call SetupBuildLauncher, jstack, \
