@@ -29,7 +29,7 @@ $(eval $(call SetupBuildLauncher, jinfo, \
     MAIN_CLASS := sun.tools.jinfo.JInfo, \
     JAVA_ARGS := \
         -Dsun.jvm.hotspot.debugger.useProcDebugger \
-        -Dsun.jvm.hotspot.debugger.useWindbgDebugger
+        -Dsun.jvm.hotspot.debugger.useWindbgDebugger \
         -XX:HotswapAgent=disabled, \
     MACOSX_PRIVILEGED := true, \
 ))
@@ -38,7 +38,7 @@ $(eval $(call SetupBuildLauncher, jmap, \
     MAIN_CLASS := sun.tools.jmap.JMap, \
     JAVA_ARGS := \
         -Dsun.jvm.hotspot.debugger.useProcDebugger \
-        -Dsun.jvm.hotspot.debugger.useWindbgDebugger
+        -Dsun.jvm.hotspot.debugger.useWindbgDebugger \
         -XX:HotswapAgent=disabled, \
     MACOSX_PRIVILEGED := true, \
 ))
