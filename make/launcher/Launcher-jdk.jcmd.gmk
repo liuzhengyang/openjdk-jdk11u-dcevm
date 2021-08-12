@@ -30,7 +30,7 @@ $(eval $(call SetupBuildLauncher, jinfo, \
     JAVA_ARGS := \
         -Dsun.jvm.hotspot.debugger.useProcDebugger \
         -Dsun.jvm.hotspot.debugger.useWindbgDebugger
-        -XX:HotswapAgent=disable, \
+        -XX:HotswapAgent=disabled, \
     MACOSX_PRIVILEGED := true, \
 ))
 
@@ -39,13 +39,13 @@ $(eval $(call SetupBuildLauncher, jmap, \
     JAVA_ARGS := \
         -Dsun.jvm.hotspot.debugger.useProcDebugger \
         -Dsun.jvm.hotspot.debugger.useWindbgDebugger
-        -XX:HotswapAgent=disable, \
+        -XX:HotswapAgent=disabled, \
     MACOSX_PRIVILEGED := true, \
 ))
 
 $(eval $(call SetupBuildLauncher, jps, \
     MAIN_CLASS := sun.tools.jps.Jps, \
-    JAVA_ARGS := -XX:HotswapAgent=disable, \
+    JAVA_ARGS := -XX:HotswapAgent=disabled, \
 ))
 
 $(eval $(call SetupBuildLauncher, jstack, \
@@ -53,18 +53,18 @@ $(eval $(call SetupBuildLauncher, jstack, \
     JAVA_ARGS := \
         -Dsun.jvm.hotspot.debugger.useProcDebugger \
         -Dsun.jvm.hotspot.debugger.useWindbgDebugger \
-        -XX:HotswapAgent=disable, \
+        -XX:HotswapAgent=disabled, \
     MACOSX_PRIVILEGED := true, \
 ))
 
 $(eval $(call SetupBuildLauncher, jstat, \
     MAIN_CLASS := sun.tools.jstat.Jstat, \
-    JAVA_ARGS := -XX:HotswapAgent=disable, \
+    JAVA_ARGS := -XX:HotswapAgent=disabled, \
 ))
 
 $(eval $(call SetupBuildLauncher, jcmd, \
     MAIN_CLASS := sun.tools.jcmd.JCmd, \
-    JAVA_ARGS := -XX:HotswapAgent=disable, \
+    JAVA_ARGS := -XX:HotswapAgent=disabled, \
 ))
 
 # Hook to include the corresponding custom file, if present.
